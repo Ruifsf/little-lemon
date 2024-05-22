@@ -42,6 +42,12 @@ nav ul li{
   margin-left: 1rem;
 }
 
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--green)
+}
+
 footer{
   background-color: var(--green);
   padding: 20px 0;
@@ -69,6 +75,7 @@ footer{
 .heroBanner{
   border-radius: var(--radius);
   transition: all 300ms ease-in-out;
+  width:300px;
 }
 
 .heroBanner:hover{
@@ -246,5 +253,25 @@ footer{
   .maxWidth {
     padding-left: 16px;
     padding-right: 16px;
+  }
+  .heroContainer{
+    flex-direction: column;
+  }
+  .heroLeftColumn{
+    margin-bottom: 10px;
+  }
+  .heroBanner{
+    width: 100%;
+    height: auto;
+  }
+  .mainDishesContainer{
+    flex-direction: column;
+  }
+  .descriptionContainer{
+    flex-direction: column;
+  }
+  .descriptionImage{
+    max-width: 100%;
+    height: auto;
   }
 }
