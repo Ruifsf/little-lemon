@@ -1,8 +1,11 @@
-import Logo from "./assets/Logo.svg"
+import Logo from "./assets/Logo.svg";
+import Nav from "./Nav";
+
 function Header (){
     return (
-        <header>
+        <header className="maxWidth">
             <img src={Logo} alt="Logo"/>
+            <Nav/>
         </header>
     )
 }

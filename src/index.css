@@ -5,9 +5,246 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --green : #495E57;
+  --yellow: #F4CE14;
+  --orange: #EE9972;
+  --lightOrange: #FBDABB;
+  --grey: #EDEFEE;
+  --black: #333333;
+  --radius: 16px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.maxWidth {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li{
+  display: inline;
+  margin-left: 1rem;
+}
+
+footer{
+  background-color: var(--green);
+  padding: 20px 0;
+}
+
+.hero{
+  background-color: var(--green);
+  overflow: hidden;
+}
+
+.heroContainer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.heroLeftColumn {
+  flex: 1;
+}
+
+.heroRightColumn {
+  flex: 1;
+  text-align: end;
+}
+.heroBanner{
+  border-radius: var(--radius);
+  transition: all 300ms ease-in-out;
+}
+
+.heroBanner:hover{
+  -webkit-box-shadow: 0px 60px 124px -46px rgba(216,235,153,1);
+  -moz-box-shadow: 0px 60px 124px -46px rgba(216,235,153,1);
+  box-shadow: 0px 60px 124px -46px rgba(216,235,153,1);
+}
+
+.heroLeftColumn h1{
+  color: var(--yellow);
+  font-size: 40px;
+}
+
+.heroLeftColumn h2{
+  color: var(--grey);
+  margin-bottom: 20px;
+}
+
+.heroLink{
+  display: block;
+  width: fit-content;
+  border-radius: var(--radius);
+  background-color: var(--orange);
+  padding:  10px 15px;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--grey);
+}
+
+.mainDishesContainer{
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.littleFingers{
+  height: 300px;
+  background-image: url(./assets/littleFingers.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.greekSalad{
+  height: 300px;
+  background-image: url(./assets/greekSalad.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.lemonPie{
+  height: 300px;
+  background-image: url(./assets/lemonPie.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.3s ease;
+}
+
+.dishContainer{
+  border-radius: var(--radius);
+  overflow: hidden;
+  flex:1;
+  border: 1px solid var(--green);
+  background-color: var(--grey);
+}
+
+.dishContainer h4{
+  padding: 10px;
+}
+
+.dishContainer p{
+  padding: 10px;
+}
+
+.mainDishesTitle{
+  font-size: 36px;
+  color: var(--orange);
+}
+
+.descriptionSection{
+  background-color: var(--lightOrange);
+  padding: 20px 0;
+}
+
+.descriptionContainer{
+  display: flex;
+}
+
+.descriptionText{
+  flex: 1;
+}
+
+.descriptionText h5{
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: bold;
+  margin: 0 0 20px 0;
+}
+
+.descriptionText p{
+  margin-right: 30px;
+}
+
+
+.descriptionImage{
+  flex: 1;
+  max-width: 50%;
+
+  border-radius: var(--radius);
+}
+
+.dishContainer:hover .littleFingers{
+  transform: scale(1.1);
+}
+.dishContainer:hover .greekSalad{
+  transform: scale(1.1);
+}
+.dishContainer:hover .lemonPie{
+  transform: scale(1.1);
+}
+
+.footerContainer{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.footerContainer ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footerContainer ul li{
+  padding: 5px 0;
+  font-weight: normal;
+}
+
+.footerContainer ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+.footerContainer p{
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+
+.footerSitemap{
+  flex: 1;
+  display: flex;
+  justify-content: end;
+  margin-right: 40px;
+}
+
+@media (max-width: 768px) {
+  nav ul li{
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    margin: 0 auto;
+  }
+  header {
+    flex-direction: column;
+  }
+  .maxWidth {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
