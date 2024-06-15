@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 function FormReserve ({availableTimes, setAvailableTimes, submitForm}) {
+    const [disableSubmit, setDisableSubmit] = useState(true);
     const [formContent, setFormContent] = useState({
         date: "",
         time: "17:00",
@@ -13,6 +14,14 @@ function FormReserve ({availableTimes, setAvailableTimes, submitForm}) {
         submitForm(formContent);
     }
 
+    useEffect(() => {
+        if(formContent.date == ""){
+            setDisableSubmit(true);
+        }
+        else{
+            setDisableSubmit(false);
+        }
+    },[formContent]);
 
     return(
         <div className="formReserveContainer">
@@ -21,7 +30,7 @@ function FormReserve ({availableTimes, setAvailableTimes, submitForm}) {
 
                 <div>
                     <label htmlFor="datela">Choose a Date:</label> <br/>
-                    <input type="date" name="date" id="date" value={formContent.date} onChange={(e)=> setFormContent({date: e.target.value}) } ></input>
+                    <input type="date" name="date" id="date" value={formContent.date} onChange={(e)=> setFormContent({date: e.target.value})} required></input>
                 </div>
                 <div>
                     <label htmlFor="time">Choose a Time:</label><br/>
@@ -44,7 +53,7 @@ function FormReserve ({availableTimes, setAvailableTimes, submitForm}) {
                         <option value="Other">Other</option>
                     </select>
                 </div>
-                <input type="submit" value="Request Table"></input>
+                <input type="submit" value="Request Table" disabled={disableSubmit} aria-label="On Click"></input>
             </form>
         </div>
     );
