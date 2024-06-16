@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react";
-function FormReserve ({availableTimes, setAvailableTimes, submitForm}) {
+function BookingForm ({availableTimes, setAvailableTimes, submitForm}) {
     const [disableSubmit, setDisableSubmit] = useState(true);
     const [formContent, setFormContent] = useState({
         date: "",
@@ -58,4 +58,4 @@ function FormReserve ({availableTimes, setAvailableTimes, submitForm}) {
     );
 }
 
-export default FormReserve;
+export default BookingForm;

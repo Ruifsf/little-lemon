@@ -1,6 +1,6 @@
 import Header from '../Header';
 import Footer from '../Footer';
-import FormReserve from '../FormReserve';
+import BookingForm from '../BookingForm';
 import { useState, useEffect } from 'react';
 import { fetchAPI, submitAPI } from '../api';
 import { useNavigate } from 'react-router-dom';
@@ -26,7 +26,7 @@ function Reserve() {
   return (
     <>
       <Header/>
-      <FormReserve availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} submitForm={submitForm}/>
+      <BookingForm availableTimes={availableTimes} setAvailableTimes={setAvailableTimes} submitForm={submitForm}/>
       <Footer/>
     </>
   );
