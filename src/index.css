@@ -12,6 +12,7 @@ body {
   --grey: #EDEFEE;
   --black: #333333;
   --radius: 16px;
+  --radius2: 8px;
 }
 
 code {
@@ -245,6 +246,7 @@ footer{
 
 .formH2 {
   color: var(--orange);
+  margin-top: 0;
 }
 
 .formLabels{
@@ -261,6 +263,7 @@ footer{
   border-radius: var(--radius);
   padding: 50px;
   background-color: var(--green);
+  gap: 20px;
 }
 
 .confirmedBooking{
@@ -273,9 +276,11 @@ footer{
 }
 
 .formInputs {
-  border-radius: var(--radius);
+  border-radius: var(--radius2);
   padding: 5px;
   background-color: white;
+  border: none;
+  margin-top: 5px;
 }
 
 @media (max-width: 768px) {
