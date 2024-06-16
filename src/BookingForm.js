@@ -23,7 +23,7 @@ function BookingForm ({availableTimes, setAvailableTimes, submitForm}) {
     },[formContent]);
 
     return(
-        <div className="formReserveContainer">
+        <main className="formReserveContainer">
             <form onSubmit={handleSubmit} className="formReserve" id="form-component">
                 <h2 className="formH2">Reserve a Table</h2>
 
@@ -54,7 +54,7 @@ function BookingForm ({availableTimes, setAvailableTimes, submitForm}) {
                 </div>
                 <input type="submit" value="Request Table" disabled={disableSubmit} aria-label="On Click" className="formInputs"></input>
             </form>
-        </div>
+        </main>
     );
 }
 
