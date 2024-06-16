@@ -251,6 +251,7 @@ footer{
 
 .formLabels{
   font-weight: bold;
+  color:var(--lightOrange);
 }
 
 .formReserve{
