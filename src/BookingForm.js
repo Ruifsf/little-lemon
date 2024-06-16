@@ -14,7 +14,7 @@ function BookingForm ({availableTimes, setAvailableTimes, submitForm}) {
     }
 
     useEffect(() => {
-        if(formContent.date == ""){
+        if(formContent.date === ""){
             setDisableSubmit(true);
         }
         else{
